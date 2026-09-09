@@ -6,10 +6,22 @@ import selectionSort, {
   keys as selectionKeys,
   pseudocode as selectionPseudocode,
 } from './selectionSort';
-import mergeSort, { keys as mergeKeys, pseudocode as mergePseudocode } from './mergeSort';
-import heapSort, { keys as heapKeys, pseudocode as heapPseudocode } from './heapSort';
-import quickSort, { keys as quickKeys, pseudocode as quickPseudocode } from './quickSort';
-import shellSort, { keys as shellKeys, pseudocode as shellPseudocode } from './shellSort';
+import mergeSort, {
+  keys as mergeKeys,
+  pseudocode as mergePseudocode,
+} from './mergeSort';
+import heapSort, {
+  keys as heapKeys,
+  pseudocode as heapPseudocode,
+} from './heapSort';
+import quickSort, {
+  keys as quickKeys,
+  pseudocode as quickPseudocode,
+} from './quickSort';
+import shellSort, {
+  keys as shellKeys,
+  pseudocode as shellPseudocode,
+} from './shellSort';
 import bubbleSort, {
   keys as bubbleKeys,
   pseudocode as bubblePseudocode,
@@ -34,7 +46,12 @@ export const ALGORITHMS = [
     keys: mergeKeys,
     pseudocode: mergePseudocode,
   },
-  { label: 'Heap Sort', function: heapSort, keys: heapKeys, pseudocode: heapPseudocode },
+  {
+    label: 'Heap Sort',
+    function: heapSort,
+    keys: heapKeys,
+    pseudocode: heapPseudocode,
+  },
   {
     label: 'Quick Sort',
     function: quickSort,

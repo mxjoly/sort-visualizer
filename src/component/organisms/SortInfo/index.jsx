@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import './style.css';
 
 const Legend = ({ label, color }) => {
@@ -16,9 +16,15 @@ const SortInfo = ({ keys, pseudocode }) => {
       <div className="SortInfo">
         <Legend label="Unsorted" color="var(--bar-default-color)" />
         <Legend label="Sorted" color="var(--bar-sorted-color)" />
-        {keys.groupA && <Legend label={keys.groupA} color="var(--bar-group-a-color)" />}
-        {keys.groupB && <Legend label={keys.groupB} color="var(--bar-group-b-color)" />}
-        {keys.groupC && <Legend label={keys.groupC} color="var(--bar-group-c-color)" />}
+        {keys.groupA && (
+          <Legend label={keys.groupA} color="var(--bar-group-a-color)" />
+        )}
+        {keys.groupB && (
+          <Legend label={keys.groupB} color="var(--bar-group-b-color)" />
+        )}
+        {keys.groupC && (
+          <Legend label={keys.groupC} color="var(--bar-group-c-color)" />
+        )}
       </div>
       <div className="SortInfo__Description">
         <h4>Algorithm</h4>

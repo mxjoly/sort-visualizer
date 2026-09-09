@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
 import Bar, { category } from '../../atoms/Bar';
@@ -19,7 +18,13 @@ const SortChart = ({ numbers, state }) => {
         }
 
         return (
-          <Bar key={i} value={num} width={barW} height={barH} category={barCategory} />
+          <Bar
+            key={i}
+            value={num}
+            width={barW}
+            height={barH}
+            category={barCategory}
+          />
         );
       })}
     </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
 
@@ -11,7 +10,10 @@ const ProgressBar = ({ value, maxValue }) => {
   return (
     <div className="ProgressBar">
       <span className="ProgressBar__Label">{`${percentage}%`}</span>
-      <span className="ProgressBar__Progress" style={{ width: `${percentage}%` }}></span>
+      <span
+        className="ProgressBar__Progress"
+        style={{ width: `${percentage}%` }}
+      ></span>
     </div>
   );
 };

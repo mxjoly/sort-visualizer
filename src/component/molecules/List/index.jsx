@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { IconContext } from 'react-icons';
 import { MdExpandMore } from 'react-icons/md';
@@ -7,12 +7,13 @@ import Backdrop from '../../atoms/Backdrop';
 
 const ListItems = ({ items, onSelect, open }) => {
   let classNames =
-    'List__Content' + (open ? ' List__Content_visible' : ' List__Content_hidden');
+    'List__Content' +
+    (open ? ' List__Content_visible' : ' List__Content_hidden');
 
   return (
     <ul className={classNames}>
       {items.map((item, i) => (
-        <li key={i} className="List__Item" onClick={(e) => onSelect(item)}>
+        <li key={i} className="List__Item" onClick={() => onSelect(item)}>
           {item}
         </li>
       ))}
@@ -51,7 +52,9 @@ class List extends Component {
         <Backdrop show={this.state.open} onClick={this.close} />
         <div className="List">
           <div className="List__Button" onClick={this.toggleVisible}>
-            <span className="List__Value">{selected || defaultItem || placeholder}</span>
+            <span className="List__Value">
+              {selected || defaultItem || placeholder}
+            </span>
             <IconContext.Provider value={{ className: iconClasses }}>
               <MdExpandMore />
             </IconContext.Provider>

@@ -3,16 +3,30 @@ import { addToTrace, createRange, swap } from './helpers';
 export default (numbers) => {
   let trace = [];
   let n = numbers.length;
-  let swapped = false;
+  let swapped;
 
   do {
     swapped = false;
     for (let i = 1; i < n; i++) {
-      addToTrace(trace, numbers, [i - 1, i], [], [], createRange(n, numbers.length));
+      addToTrace(
+        trace,
+        numbers,
+        [i - 1, i],
+        [],
+        [],
+        createRange(n, numbers.length),
+      );
       if (numbers[i - 1] > numbers[i]) {
         swap(numbers, i - 1, i);
         swapped = true;
-        addToTrace(trace, numbers, [], [i - 1, i], [], createRange(n, numbers.length));
+        addToTrace(
+          trace,
+          numbers,
+          [],
+          [i - 1, i],
+          [],
+          createRange(n, numbers.length),
+        );
       }
     }
     n--;
