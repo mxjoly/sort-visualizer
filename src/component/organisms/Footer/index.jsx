@@ -5,8 +5,8 @@ const Footer = () => {
     <div className="Footer">
       <p className="Footer__Paragraph">
         Developped by{' '}
-        <a className="Footer__link" href="https://github.com/cryptolympix">
-          Cryptolympix
+        <a className="Footer__link" href="https://github.com/mxjoly">
+          mxjoly
         </a>
       </p>
     </div>
